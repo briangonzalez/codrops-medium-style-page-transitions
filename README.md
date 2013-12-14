@@ -6,10 +6,12 @@ __Compiling Assets__
 
 The assets in this project are compiled using Compass along with [LiveReload](http://livereload.com/). 
 
-__Contact__
-
-Follow me on [Twitter](http://twitter.com/brianmgonzalez) and get in touch. 
-
 __License__
 
 All work licensed under the MIT license.
+
+__Author__
+
+| ![twitter/brianmgonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70](http://twitter.com/brianmgonzalez "Follow @brianmgonzalez on Twitter") |
+|---|
+| [Brian Gonzalez](http://briangonzalez.org) |
