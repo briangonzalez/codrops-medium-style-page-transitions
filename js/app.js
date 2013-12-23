@@ -1,4 +1,3 @@
-
 /*    
       jQuery Setup                                                           
 ************************************************************************/ 
@@ -34,7 +33,7 @@ ArticleAnimator.load = function(){
       self.refreshCurrentAndNextSelection();
 
       /* Push initial on to stack */
-      history.pushState(pageState(), "", "#" + self.currentPostIndex)
+      history.pushState(pageState(), "", "#!" + self.currentPostIndex)
 
       /* Bind to some events. */
       self.bindGotoNextClick();
@@ -60,7 +59,7 @@ ArticleAnimator.getPost = function(index, callback){
   }
 
   var self = this;
-  $.getJSON('/data/post_'+ index +'.json', function(d){
+  $.getJSON('data/post_'+ index +'.json', function(d){
     self.postCache[index] = d;
     callback(d)
   });
@@ -134,7 +133,7 @@ ArticleAnimator.bindGotoNextClick = function(){
     self.animatePage(function(){
       self.createPost({ fromTemplate: true, type: 'next' });
       self.bindGotoNextClick();
-      history.pushState( pageState(), '', "#" + self.currentPostIndex);
+      history.pushState( pageState(), '', "#!" + self.currentPostIndex);
     });
   });
 }
@@ -195,7 +194,7 @@ function pageState(){
 }
 
 function getURLIndex(){
-  return parseInt( (history.state && history.state.index) ||window.location.hash.replace('#', "") || ArticleAnimator.currentPostIndex );
+  return parseInt( (history.state && history.state.index) ||window.location.hash.replace('#!', "") || ArticleAnimator.currentPostIndex );
 }
 
 
