@@ -60,7 +60,7 @@ ArticleAnimator.getPost = function(index, callback){
   }
 
   var self = this;
-  $.getJSON('/data/post_'+ index +'.json', function(d){
+  $.getJSON('data/post_'+ index +'.json', function(d){
     self.postCache[index] = d;
     callback(d)
   });
